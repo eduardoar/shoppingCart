@@ -2,6 +2,12 @@ package com.rosales.carritocompras.controller;
 
 import com.rosales.carritocompras.entity.Cart;
 import com.rosales.carritocompras.service.CartService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,10 +25,12 @@ import java.util.List;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/carts")
+@Tag(name = "Cart")
 public class CartController {
 
     private final CartService cartService;
 
+    @Operation(summary = "Return List of all shopping carts")
     @GetMapping
     public ResponseEntity<List<Cart>> listAllCart() {
         return new ResponseEntity<>(cartService.listAllCart(), HttpStatus.OK);

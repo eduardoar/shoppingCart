@@ -10,9 +10,9 @@
     </parent>
     <groupId>com.rosales</groupId>
     <artifactId>carrito-compras</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>carrito-compras</name>
-    <description>carrito-compras</description>
+    <version>1.0.0</version>
+    <name>Shopping Cart</name>
+    <description>Backend Shopping Cart</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -39,6 +39,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.6.9</version>
         </dependency>
     </dependencies>
 

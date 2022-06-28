@@ -9,3 +9,8 @@ spring:
     url: jdbc:postgresql://localhost:5432/bd_carrito
     username: postgres
     password: admin
+
+openapi:
+  project-title: @project.name@
+  project-version: @project.version@
+  project-description: @project.description@
