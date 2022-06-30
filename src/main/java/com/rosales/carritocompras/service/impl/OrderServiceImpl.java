@@ -26,6 +26,11 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order createOrder(Order order) {
+
+        order.getOrderDetail().forEach(od -> {
+            od.setOrder(order);
+        });
+
         return orderRepository.save(order);
     }
 

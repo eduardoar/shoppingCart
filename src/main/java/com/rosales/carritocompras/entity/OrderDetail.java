@@ -1,5 +1,6 @@
 package com.rosales.carritocompras.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -23,6 +24,7 @@ public class OrderDetail {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idOrderDetail;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "id_order", nullable = false, foreignKey = @ForeignKey(name = "FK_order_detail"))
     private Order order;
